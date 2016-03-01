@@ -1,0 +1,18 @@
+net: "/home/vgenty/git/caffe/models/vic_18/prototxt/ResNet-18-train_val.prototxt"
+test_iter: 5000
+test_interval: 10000
+test_initialization: false
+
+#base_lr: 0.0001
+base_lr: 0.1
+lr_policy: "multistep"
+gamma: 0.1
+stepsize: 20000
+display: 100
+max_iter: 200000
+momentum: 0.9
+weight_decay: 0.0001
+snapshot: 10000
+snapshot_prefix: "resnet18_train_vic"
+solver_mode: GPU
+#type: "VIC"
