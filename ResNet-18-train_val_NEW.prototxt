@@ -15,7 +15,7 @@ layer {
       }
   data_param {
     source: "/home/vgenty/git/caffe/build/tools/ub_seven_class_train.db"
-      batch_size: 16
+      batch_size: 8
       backend: LMDB
       }
 
@@ -36,7 +36,7 @@ layer {
       }
   data_param {
     source: "/home/vgenty/git/caffe/build/tools/ub_seven_class_valid.db"
-      batch_size:16
+      batch_size:8
       backend: LMDB
       }
 }
@@ -334,7 +334,7 @@ layer {
 }
 
 layer {
-  bottom: "res2a"
+    bottom: "res2b_branch1"
     bottom: "res2b_branch2b"
     top: "res2b"
     name: "res2b"
@@ -491,7 +491,7 @@ layer {
     num_output: 128
       kernel_size: 1
       pad: 0
-      stride: 2
+      stride: 1
       bias_term: false
       }
 }
@@ -593,7 +593,7 @@ layer {
 }
 
 layer {
-  bottom: "res3a"
+  bottom: "res3b_branch1"
     bottom: "res3b_branch2b"
     top: "res3b"
     name: "res3b"
@@ -750,7 +750,7 @@ layer {
     num_output: 256
       kernel_size: 1
       pad: 0
-      stride: 2
+      stride: 1
       bias_term: false
       }
 }
@@ -852,7 +852,7 @@ layer {
 }
 
 layer {
-  bottom: "res4a"
+  bottom: "res4b_branch1"
     bottom: "res4b_branch2b"
     top: "res4b"
     name: "res4b"
@@ -1008,7 +1008,7 @@ layer {
     num_output: 512
       kernel_size: 1
       pad: 0
-      stride: 2
+      stride: 1
       bias_term: false
       }
 }
@@ -1110,7 +1110,7 @@ layer {
 }
 
 layer {
-  bottom: "res5a"
+  bottom: "res5b_branch1"
     bottom: "res5b_branch2b"
     top: "res5b"
     name: "res5b"

@@ -1,4 +1,4 @@
-net: "/home/vgenty/git/caffe/models/vic_18/prototxt/ResNet-18-train_val.prototxt"
+net: "/home/vgenty/git/caffe/models/vic_18/prototxt/ResNet-18-train_val_NEW.prototxt"
 test_iter: 5000
 test_interval: 10000
 test_initialization: false
